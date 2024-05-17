@@ -1,0 +1,67 @@
+/* 参考元サイト[https://coco-factory.jp/ugokuweb/] */
+@charset "utf-8";
+
+/*========= LAYOUT ===============*/
+
+h1#behind{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  color:#2A3132;
+  text-shadow: 0 0 10px #90afc5;
+  text-align: center;
+}
+p#behind{
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  color:#2A3132;
+  text-shadow: 0 0 10px #90afc5;
+  text-align: center;
+}
+
+
+/*========= OVERWRAP AREA ===============*/
+
+#header {
+  width:100%;
+  height: 100vh;
+  position: relative;
+} 
+
+#header:before{
+  /* SET FAKE CONTENT */
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-10;
+  width:100%;
+  height: 100vh;
+  /* BACKGROUND IMAGE */
+  background:url("images/j1pzau.jpg") no-repeat center;
+  background-size:cover;
+  background-color: #2a3132;
+  filter: blur(8px);
+  animation: parallax linear;
+  animation-timeline: view();
+}@keyframes parallax {
+  from {
+    background-position: center 0px;
+  }
+  to {
+    background-position: center -600px;
+  }
+}
+
+/* AREA INDEX */
+#container_rel{
+  position: relative;
+  background-color: #90afc5;
+  padding-top: 0px;
+  padding-bottom: 120px;
+  border-top:solid #2A3132;
+  z-index: 1;
+}

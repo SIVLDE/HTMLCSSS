@@ -1,0 +1,464 @@
+@charset "UTF-8";
+
+/* ====================================== MAIN FRAME WORK ====================================== */
+h1#behind {
+    margin: auto;
+}
+#container_abs {
+    padding-top: 50px;
+}
+figure {
+    overflow: hidden;
+}
+figure a img {
+    overflow: hidden;
+    transition: 0.5s;
+}
+figure a img:hover {
+    opacity: 80%;
+    transform: scale(1.2,1.2);
+    transition: 1s all;
+}
+.lead {
+    font-size: 20px;
+}
+.title {
+    background-color: #763626;
+    color: #90AFC5;
+}
+/* ADJUST IMAGE SIZE */
+@media screen and (max-width: 600px) {
+    img {
+        margin: 1px;
+        max-width: 60%;
+        object-fit: fill;
+        padding: 2px;
+    }
+}
+
+    /* ---GLOBAL NAVIGATION--- */
+    #global_navi {
+        margin: 0 0;
+        overflow: hidden;
+        width: 100%;
+        z-index: 10;
+    }
+    #global_navi ul {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    #global_navi ul li::before,
+    #global_navi ul li::after {
+        height: 0;
+        left: 0;
+        width: calc(100%-20px);
+    }
+    #global_navi ul li::before{
+        bottom: 100%;
+        border-right: solid 20px transparent;
+    }
+    #global_navi ul li::after {
+        border-left: solid 20px transparent;
+        border-top: solid 20px #2A3132;
+        top: 100%;
+    }
+    #global_navi ul li {
+        background: #90AFC5;
+        cursor: pointer;
+        display: left;
+        font-size: 15px;
+        position: relative;
+        text-transform: uppercase;
+        text-align: center;
+        width: 475px;
+    }
+    
+    /* --- BORDER SETTINGS --- */
+    #global_navi ul li a {
+        border-color: #2A3132 #2A3132 #2A3132 #2A3132;
+        border-style: solid solid double double;
+        border-width: 3px 5px 4.5px 4.5px;
+        color: #2A3132;
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        transition: 0.66s;
+    }
+    #global_navi ul li a:hover {
+        background-color: #2A3132;
+        border-color: #90AFC5 #90AFC5 #90AFC5 #90AFC5;
+        border-style:0 solid double double;
+        border-width: 3px 5px 4.5px 4.5px;
+        color: #90AFC5;
+        transition: 0.1s;
+    }
+    #global_navi ul li.current a{
+        background-color: #90AFC5;
+        border-color: #90AFC5 #90AFC5 #90AFC5 #90AFC5;
+        color: #2A3132;
+    }
+
+    /* --- BREAD CRUMB --- */
+    #breadcrumb {
+        background: #763626;
+        border-radius: 30%;
+        display: right;
+        margin: 5px;
+        overflow: hidden;
+        z-index: 10;
+    }
+    #breadcrumb ol {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    #breadcrumb ol li {
+        color: #90AFC5;
+        display: flex;
+        display: inline-block;
+        text-align: center;
+    }
+    #breadcrumb ol li::after {
+        content: "/";
+        padding-left: 8px;
+    }
+    #breadcrumb ol li:last-child::after {
+        content: none;
+    }
+    #breadcrumb ol li a {
+        color: #90AFC5;
+        text-decoration: none;
+    }
+    #breadcrumb ol li a:hover {
+        color: #2A3132;
+        text-decoration: none;
+        text-shadow: #fff 1px 1px 7px;
+        transition: 0.26s;
+    }
+
+    .stickey{
+        top: 1px;
+        position: sticky;
+        position: -webkit-sticky;
+    }
+    .stickeytopdown{
+        top: 55px;
+        position: sticky;
+        position: -webkit-sticky;
+    }
+    
+    li#home::before {
+        background: black;
+        background-clip: text;
+        bottom: 0;
+        content: '';
+        left: 0;
+        opacity: 1;
+        position: absolute;
+        right: 100%;
+        top: 0;
+        transition: all 0.5s;
+        z-index: -1;
+    }
+    li#home:hover::before {
+        left: 0;
+        opacity: 0.5;
+        right: 0;
+    }
+
+
+/* ========== FOTTER ========== */
+/* ---FOTTER NAVI--- */
+footer {
+    background-color: #2A3132;
+    text-align: center;
+}
+footer #footer_nav {
+    margin: 0;
+    padding:  0;
+}
+footer #footer_nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+footer #footer_nav ul li {
+    display: inline;
+    font-size: smaller;
+    margin: 5px;
+    padding: 0px;
+}
+footer #footer_nav ul li a {
+    color: azure;
+    list-style: none;
+    opacity: 0.8;
+    text-decoration: none;
+}
+footer #footer_nav ul li a:hover {
+    opacity: 1;
+    transition: 0.45s;
+}
+footer #footer_nav ul li a:hover::after {
+    background-color: #000000;
+    opacity: 0.9;
+}
+    #small {
+        background-color: #763626;
+        block-size: auto;
+        color: azure;
+        float: top;
+        position: static;
+        text-align: center;
+        text-shadow: #aaaaaa;
+    }
+    
+
+/* !!!SCROLL TEXT AND ANIMATIONS!!! */
+    .scrolldown {
+        bottom: 10px;
+        height: 50px;
+        left: 49.45%;
+        position: absolute;
+    }
+    .scrolldown span {
+        color: #fff;
+        font-size: 1em;
+        left:-30px;
+        letter-spacing: 0.5em;
+        position: absolute;
+        text-shadow: blanchedalmond aquamarine;
+        top: -25px;
+    }
+    .scrolldown::after {
+        content: "";
+        /* content position */
+        left: 10px;
+        position: absolute;
+        top: 10px;
+        /* line shape */
+        animation: pathmove 1.45s ease-in-out infinite;
+        background: azure;
+        height: 24px;
+        opacity: 0;
+        width: 0.8px;
+    }   @keyframes pathmove {
+            0%{
+                height: 8px;
+                opacity: 0;
+                top: 0;
+            }
+            50%{
+                height: 16.5px;
+                opacity: 1;
+                top: 13px;
+            }
+            100%{
+                height: 26px;
+                opacity: 0;
+                top: 0;
+            }
+        }
+
+
+/* ====================================== INDEX.HTML ====================================== */
+
+.indexmain {
+    display: right;
+    margin: auto;
+    padding: auto;
+}
+#bio {
+    border:dashed #763626 7px;
+    padding-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#bio .lead {
+    border-bottom: solid #763626 1px;
+    color: #763626;
+    text-decoration: bold;
+}
+#box div {
+    background-color: #763626;
+    border:solid 2px;
+    border-color: #2A3132;
+    border-radius: 30px;
+    box-shadow: #000000 0 2px 1px 0;
+    float: left;
+    margin-right: 100px;
+    overflow: hidden;
+    padding: 5px;
+    transition: 0.4s;
+}
+#box div:hover {
+    color: #763626;
+    transition: 0.24s;
+}
+#box div a {
+    color: #90AFC5;
+    text-decoration: none;
+}
+#box div a:hover {
+    color: #2A3132;
+    opacity: 70%;
+}
+.indexmain div section {
+    border-top: solid #763626 3px;
+    border-right: double #763626 5px;
+}
+.indexmain #sections h3{
+    background-color: #763626;
+    border: solid #763626 2px;
+    color: #90AFC5;
+    display: flex;
+    float: left;
+    margin: -1px 4px 7px 0;
+    padding-right: 8px;
+    padding-bottom: 4px;
+}
+    
+
+/* ====================================== HOBBY.HTML ====================================== */
+
+.hobmain.hob1 {
+    margin: 100px;
+}
+#electro figure {
+    align-items: center;
+    border: solid #2A3132 2px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+#electro figure a img {
+    background-color: #90AFC5;
+    height:350px;
+    object-fit:contain;
+    width:350px;
+}
+@media screen and (max-width: 600px) {
+    #electro figure {
+        align-items: center;
+        border: solid #2A3132 2px;
+        border-radius: 28px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 2px;
+    }
+    #electro figure a img {
+        height: 250px;
+        margin: 0px;
+        width: 350px;
+    }
+    
+}
+/* ====================================== RESUME.HTML ====================================== */
+
+
+#earlylife {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 50px;
+}
+#earlylife section figure a img {
+    height: 20%;
+    width: 20%;
+}
+#earlylife section figure figcaption {
+    color: #763626;
+}
+#earlylife section {
+    border-top: solid #763626 3px;
+    border-right: double #763626 5px;
+    margin-bottom: 10px;
+}
+#earlylife section h1 {
+    background-color: #763626;
+    border: solid #763626 2px;
+    color: #90AFC5;
+    display: flex;
+    float: left;
+    margin: -1px 4px 7px 0;
+    padding-right: 8px;
+    padding-bottom: 4px;
+}
+#earlylife section p {
+    padding-top: 7px;
+}
+
+/* ====================================== PICTURE.HTML ====================================== */
+
+.picture-main div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.picture-main div figure {
+    align-items: center;
+    border: solid #763626 2px;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+.picture-main div figure a img {
+    background-color: #90AFC5;
+    height:300px;
+    object-fit:cover;
+    width:300px;
+}
+
+.picture-main div figure figcaption {
+    font-size: 15px;
+    padding: 5px;
+}
+
+/* ====================================== EXTRA.HTML ====================================== */
+.extramain section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 1px;
+}
+#food figure {
+    align-items: center;
+    border: solid #763626 2px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+#photo figure {
+    align-items: center;
+    border: solid #763626 2px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.extramain * figure a img {
+    background-color: #90AFC5;
+    height:300px;
+    object-fit:cover;
+    width:300px;
+}
+.a-href a {
+    background-color: azure;
+    border-radius: 8px;
+    color: #2A3132;
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}

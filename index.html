@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>自己紹介ページ</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="ress.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel=" icon" href="images/favicon (1).ico">
+  </head>
+
+  <!-- BODY -->
+  <body>
+    <div class="fadein"></div>
+    <div class="content">
+    <!-- HEADER -->
+    <header id="header">
+      <section>
+        <big><big><big><h1 id="behind">自己紹介</h1></big></big></big>
+        <big><p id="behind">HOME</p></big>
+        <div class="scrolldown" ><span>Scroll</span></div>
+      </section>
+    </header>
+    <!--/ HEADER /-->
+    
+    <!-- CONTAINER_RELATIVE -->
+    <div id="container_rel">
+        <nav id="global_navi" class="stickey">
+            <ul>
+                <li class="current" id="home"><a href="index.html">HOME</a></li>
+                <li id="hobby"><a href="hobby.html">趣味</a></li>
+                <li id="resume"><a href="resume.html">経歴</a></li>
+                <li id="photo"><a href="picture.html">写真</a></li>
+                <li id="extra"><a href="extra.html">おまけ</a></li>
+            </ul>
+        </nav>
+        <!-- CONTAINER_ABSOLUTE -->
+        <div id="container_abs">
+            <div id="breadcrumb" class="stickeytopdown">
+                <ol>
+                <li><a href="index.html">HOME</a></li>
+                </ol>
+            </div>
+        <!-- MAIN -->
+        <div class="indexmain">
+          <h1 class="title">自己紹介ページへようこそ</h1>
+          <div id="bio">
+            <p class="lead">おおまかな生い立ち</p>
+            <p><strong>2001年 2月5日</strong><br>栃木県で誕生。</p>
+            <p>ほとんどの時間を地元の栃木県佐野市で過ごす。</p>
+            <p><strong>2019年</strong> <br>栃木県立佐野東高等学校を卒業。</p>
+            <p><strong>同年4月</strong><br>東京工芸大学芸術学部デザイン学科へ入学。</p>
+            <p><strong>2020年</strong><br>コロナ禍での大学生活を経験。</p>
+            <p><strong>2021年6月</strong><br>様々な要因が重なり、大学中退。</p>
+            <p><strong>2021年7月-2023年</strong><br>約2年、何もしない毎日が続いた。</p>
+            <p><strong>2023年11月</strong><br>母親からの提案で、専門学校へ入学を決意</p>
+            <p><div id="nowday">
+            <script>
+                  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                  document.getElementById("nowday").innerHTML = new Date().toLocaleDateString('ja-JP', options);
+              </script>現在、大原簿記情報ビジネス専門学校に在学中。
+              </div>
+            </p>
+          </div>
+          <div id="sections">
+              <section>
+                <h3>小さい頃の私</h3>
+                <p>には、様々な将来の夢がありました。学校の先生、電車の運転士、建築設計士...その中でも、一番なりたかった職業は宇宙飛行士。少年時代の自分は、宇宙に夢中でした。</p>
+                <p>やがて時は流れ、小学、中学、高校時代を地元栃木で過ごし、2019年、無事に高校を卒業。数学がとことんできなかった自分は、いつの日か夢見た宇宙飛行士への憧れは遠のいてしまっていました。</p>
+              </section>
+              <section>
+                <h3>今に至るまで</h3>
+                <p>私は昔からずっとゲームをプレイすることが好きで、ゲームをしなかった日は、受験や引っ越しなどでそれどころではない日を除けばほとんど無いくらいには好きでした。</p>
+                <p>しかし、私の趣味はゲームだけではありません。自分にあまり合わなかったものはすぐに飽きてしまうという性格もあって、様々な趣味を持っては捨てて来ましたが、友人から影響を受けて去年から電子工作をやるようになりました。</p>
+                <p>他にも、写真を撮ったり、料理をしたり、映画を鑑賞したり、時には絵を描いたり。多趣味に生きてきました。</p>
+              </section>
+              <sections id="box">
+                  <div><big><strong><a href="hobby.html">趣味</strong></big>についてもっと知る</a></div>
+                  <div><big><strong><a href="resume.html">経歴</strong></big>についてもっと知る</a></div>
+              </sections>
+            </div>
+        </div>
+          <!--/ MAIN /-->
+      </div>
+      <!--/ CONTAINER_ABSOLUTE /-->
+    </div>
+    <!--/ CONTAINER_RELATIVE /-->
+
+    <!-- FOOTER -->
+    <footer>
+      <div id="footer_nav">
+        <ul>  
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="hobby.html">趣味</a></li>
+          <li><a href="resume.html">経歴</a></li>
+          <li><a href="picture.html">写真</a></li>
+          <li><a href="extra.html">おまけ</a></li>
+        </ul>
+      </div>
+      <div id="small">
+        <small>&copy; 2024  Shunsuke Saito  all  rights  reserved. </small>
+       </div>
+    </footer>
+    <!--/ FOOTER /-->
+    </div>
+
+  </body>
+  <!--/ BODY /-->
+</html>
